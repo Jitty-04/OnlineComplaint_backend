@@ -33,6 +33,6 @@ public class ComplaintController {
     @PostMapping(path = "/mycomplaint",consumes = "application/json",produces = "application/json")
     public List<Complaints> ViewMyComplaint(@RequestBody Complaints c)
     {
-        return (List<Complaints>) dao.ViewComplaint(c.getId());
+        return (List<Complaints>) dao.ViewComplaint(c.getUserid());
     }
 }
